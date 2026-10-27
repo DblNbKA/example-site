@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Александр Иванов — Спикер & Исследователь стиля</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: {
+              950: '#0c0d0e',
+              900: '#131517',
+              850: '#181b1e',
+              800: '#202428',
+              700: '#2d3238',
+            },
+            linen: {
+              50: '#faf9f6',
+              100: '#f5f3ee',
+              200: '#eae6dd',
+              300: '#d9d2c4',
+              muted: '#9a9489',
+            },
+            accent: {
+              champagne: '#d6c4a5',
+              caramel: '#b89467',
+              sand: '#e8decb'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0c0d0e;
+      color: #faf9f6;
+      background-image: 
+        radial-gradient(ellipse at 80% 0%, rgba(184, 148, 103, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 15% 100%, rgba(214, 196, 165, 0.05) 0%, transparent 50%);
+    }
+
+    .editor-border {
+      border: 1px solid rgba(217, 210, 196, 0.12);
+    }
+
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover:hover {
+      border-color: rgba(214, 196, 165, 0.35);
+      transform: translateY(-2px);
+      background-color: #1a1c20;
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans antialiased selection:bg-accent-caramel selection:text-noir-950 flex flex-col justify-between p-4 sm:p-8 lg:p-12">
+
+  <!-- Контейнер на весь экран -->
+  <main class="w-full max-w-5xl mx-auto my-auto space-y-10 sm:space-y-14">
+
+    <!-- 1. ПРОФИЛЬ / ШАПКА -->
+    <header class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 pb-10 border-b border-linen-300/15">
+      
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+        <!-- Аватар стильного парня в монохромной/журнальной эстетике -->
+        <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden editor-border bg-noir-850 shadow-2xl flex-shrink-0 group">
+          <svg class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="#16181b"/>
+            <!-- Элегантный фон -->
+            <circle cx="100" cy="75" r="55" fill="#24282e"/>
+            <!-- Силуэт: стильный силуэт парня в пиджаке и рубашке -->
+            <path d="M100 48C84 48 76 60 76 76C76 92 85 102 100 102C115 102 124 92 124 76C124 60 116 48 100 48Z" fill="#d6c4a5"/>
+            <!-- Стрижка / форма волос -->
+            <path d="M72 70C72 52 82 40 100 40C118 40 128 52 128 66C128 72 124 68 120 62C114 56 106 54 98 54C88 54 80 58 74 64C72 66 72 68 72 70Z" fill="#0c0d0e"/>
+            <!-- Острый лацкан дизайнерского пиджака / пальто -->
+            <path d="M38 185C38 142 62 124 82 118L100 152L118 118C138 124 162 142 162 185H38Z" fill="#1c2025"/>
+            <path d="M100 112L85 142H115L100 112Z" fill="#e8decb"/>
+            <path d="M85 125L60 178L88 185L100 152L85 125Z" fill="#2d3238"/>
+            <path d="M115 125L140 178L112 185L100 152L115 125Z" fill="#252a30"/>
+          </svg>
+          <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+        </div>
+
+        <!-- Информация о спикере -->
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-noir-850 editor-border text-[11px] font-medium tracking-widest uppercase text-accent-champagne">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent-caramel animate-pulse"></span>
+            26 лет · Лектор · Спикер
+          </div>
+          
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold tracking-tight text-linen-50">
+            Александр Иванов
+          </h1>
+          
+          <p class="text-sm sm:text-base text-linen-muted font-light max-w-lg">
+            Исследователь истории моды, парфюмерии & культовых феноменов поп-культуры. Проводник в мир эстетики и редких контекстов.
+          </p>
+        </div>
+      </div>
+
+      <!-- Лаконичные быстрые кнопки -->
+      <div class="flex items-center gap-3 w-full sm:w-auto">
+        <a href="https://t.me/username" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-linen-100 hover:bg-white text-noir-950 font-medium text-xs sm:text-sm tracking-wide transition duration-200 shadow-sm">
+          <span>Написать в Telegram</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </a>
+
+        <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-noir-850 hover:bg-noir-800 text-linen-100 font-medium text-xs sm:text-sm tracking-wide editor-border transition duration-200">
+          <span>Instagram</span>
+          <svg class="w-3.5 h-3.5 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </div>
+
+    </header>
+
+    <!-- 2. СЕТКА: О СЕБЕ & КОНТАКТЫ -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+      
+      <!-- Блок «О себе» -->
+      <div class="md:col-span-7 space-y-4">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-caramel">
+          О спикере & Подходе
+        </h2>
+        
+        <p class="text-lg sm:text-xl font-serif text-linen-100 leading-relaxed font-light">
+          «Одежда и ароматы — это не просто вещи, это тайный язык истории, власти и личной свободы».
+        </p>
+        
+        <div class="space-y-3 text-sm text-linen-muted leading-relaxed font-light">
+          <p>
+            Мне 26, и я рассказываю о культуре без академической духоты: живо, кинематографично и с акцентом на детали, о которых не пишут в учебниках. Моя главная страсть — архитектура костюма, винтаж, эстетические бунты и невидимая история парфюмерных домов от Парижа до Нью-Йорка.
+          </p>
+          <p>
+            При этом формат гибкий: с одинаковым драйвом держу внимание зала как на закрытом ужине бренда, так и на публичных дискуссиях об искусстве, кинематографе, урбанистике или философии повседневности под персональный запрос и концепт события.
+          </p>
+        </div>
+      </div>
+
+      <!-- Блок «Контакты» -->
+      <div class="md:col-span-5 bg-noir-900 rounded-2xl p-6 editor-border space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-linen-300/10">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-champagne">
+            Контакты
+          </h2>
+          <span class="text-[11px] text-linen-muted">Для лекций & коллабораций</span>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm">
+          <!-- Telegram юзернейм -->
+          <div class="flex items-center justify-between group">
+            <span class="text-linen-muted">Telegram:</span>
+            <a href="https://t.me/username" target="_blank" rel="noopener noreferrer" class="font-medium text-linen-100 group-hover:text-accent-champagne transition flex items-center gap-1.5">
+              <span>@username</span>
+              <span class="text-[10px] text-linen-muted">↗</span>
+            </a>
+          </div>
+
+          <!-- Ссылка на инсту -->
+          <div class="flex items-center justify-between group">
+            <span class="text-linen-muted">Instagram:</span>
+            <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" class="font-medium text-linen-100 group-hover:text-accent-champagne transition flex items-center gap-1.5">
+              <span>@username</span>
+              <span class="text-[10px] text-linen-muted">↗</span>
+            </a>
+          </div>
+
+          <!-- Почта -->
+          <div class="flex items-center justify-between group">
+            <span class="text-linen-muted">Email:</span>
+            <a href="mailto:direct@domain.com" class="font-medium text-linen-100 group-hover:text-accent-champagne transition">
+              direct@domain.com
+            </a>
+          </div>
+
+          <!-- Город и формат -->
+          <div class="flex items-center justify-between pt-2 border-t border-linen-300/10">
+            <span class="text-linen-muted">Формат:</span>
+            <span class="text-linen-200 font-medium text-right">Офлайн / Онлайн лекции</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 3. НАПРЯМКИ / ОСНОВНЫЕ НАПРАВЛЕНИЯ ЛЕКЦИЙ -->
+    <section class="space-y-5 pt-4">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-caramel">
+          Напрямки / Темы выступлений
+        </h2>
+        <span class="text-xs text-linen-muted">Каждая лекция адаптируется под аудиторию и формат ивента</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Карточка 1 -->
+        <div class="p-5 rounded-2xl bg-noir-900 editor-border card-hover flex flex-col justify-between h-full space-y-4">
+          <div class="space-y-2">
+            <div class="text-accent-champagne text-xs font-mono">01 /</div>
+            <h3 class="font-serif text-lg font-semibold text-linen-50">
+              История моды & Haute Couture
+            </h3>
+            <p class="text-xs text-linen-muted leading-relaxed font-light">
+              От кутюрных салонов XX века до архивного дроп-капитализма и концептуального деконструктивизма.
+            </p>
+          </div>
+          <span class="text-[11px] text-accent-caramel uppercase tracking-wider font-medium">Ключевая тема</span>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="p-5 rounded-2xl bg-noir-900 editor-border card-hover flex flex-col justify-between h-full space-y-4">
+          <div class="space-y-2">
+            <div class="text-accent-champagne text-xs font-mono">02 /</div>
+            <h3 class="font-serif text-lg font-semibold text-linen-50">
+              Парфюмерия & Ольфакторий
+            </h3>
+            <p class="text-xs text-linen-muted leading-relaxed font-light">
+              Культовые ноты эпох, нишевые парфюмерные лаборатории, шипры и революция синтетических молекул.
+            </p>
+          </div>
+          <span class="text-[11px] text-accent-caramel uppercase tracking-wider font-medium">Авторский курс</span>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="p-5 rounded-2xl bg-noir-900 editor-border card-hover flex flex-col justify-between h-full space-y-4">
+          <div class="space-y-2">
+            <div class="text-accent-champagne text-xs font-mono">03 /</div>
+            <h3 class="font-serif text-lg font-semibold text-linen-50">
+              Стиль & Кинематограф
+            </h3>
+            <p class="text-xs text-linen-muted leading-relaxed font-light">
+              Как костюмы в кино формировали тренды целых десятилетий: от нуара и новой волны до эстетики 90-х.
+            </p>
+          </div>
+          <span class="text-[11px] text-accent-caramel uppercase tracking-wider font-medium">Поп-культура</span>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="p-5 rounded-2xl bg-noir-900 editor-border card-hover flex flex-col justify-between h-full space-y-4">
+          <div class="space-y-2">
+            <div class="text-accent-champagne text-xs font-mono">04 /</div>
+            <h3 class="font-serif text-lg font-semibold text-linen-50">
+              Тема под заказ / Custom
+            </h3>
+            <p class="text-xs text-linen-muted leading-relaxed font-light">
+              Кураторская подготовка эксклюзивной темы: история искусства, дизайна, брендинга или локальный контекст.
+            </p>
+          </div>
+          <span class="text-[11px] text-accent-caramel uppercase tracking-wider font-medium">Любой бриф</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ЛАКОНИЧНЫЙ ФУТЕР -->
+  <footer class="w-full max-w-5xl mx-auto pt-10 mt-10 border-t border-linen-300/10 flex flex-col sm:flex-row items-center justify-between text-xs text-linen-muted/60 gap-3">
+    <p>© Александр Иванов. Статический сайт-визитка.</p>
+    <p class="tracking-wide">Editorial style · All topics available on demand</p>
+  </footer>
+
+</body>
+</html>
